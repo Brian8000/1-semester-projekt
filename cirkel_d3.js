@@ -163,7 +163,8 @@ function emptyBasket() {
 // Function to remove food item circles
 function removeFoodItemCircles(category) {
   const sanitizedCategory = sanitizeCategoryName(category);
-  svg.selectAll(`.foodItemCircle-${sanitizedCategory}`)
+  svg
+    .selectAll(`.foodItemCircle-${sanitizedCategory}`)
     .transition()
     .duration(500)
     .attr("r", 0)
